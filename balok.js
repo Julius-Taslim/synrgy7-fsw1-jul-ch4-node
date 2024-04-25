@@ -3,7 +3,7 @@ const luasBalok = (panjang, lebar, tinggi) =>{
 }
 
 const volumeBalok = (panjang, lebar, tinggi) => {
-    console.log(panjang*lebar*tinggi)
+    return panjang*lebar*tinggi
 }
 
 module.exports ={luasBalok, volumeBalok}
