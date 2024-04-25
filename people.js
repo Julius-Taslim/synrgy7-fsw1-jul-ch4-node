@@ -67,8 +67,17 @@ const peopleWrite = () => {
 }
 const peopleRead = () => {
     fs.readFile('./dummy.txt','utf-8',(err, data)=>{
-        console.log(JSON.parse(data))
+        const readPeople = JSON.parse(data);
+        const names = readPeople.map(readPeople => readPeople.name)
+        console.log(names)
     })
 }
 
-module.exports = { peopleWrite, peopleRead }
+const peopleDetail =(id) =>{
+    fs.readFile('./dummy.txt','utf-8',(err, data)=>{
+        const readPeople = JSON.parse(data);
+        const filteredPeople = readPeople.find(readPeople => readPeople.id == id)
+        console.log(filteredPeople)
+    })
+}
+module.exports = { peopleWrite, peopleRead, peopleDetail }

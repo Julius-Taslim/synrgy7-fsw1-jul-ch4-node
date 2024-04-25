@@ -73,7 +73,12 @@ fs.readFile('./fs.txt','utf-8', (err,data)=>{
 
 //Latihan 3 - Write and Read.
 
-const {peopleWrite, peopleRead} = require('./people')
+const {peopleWrite, peopleRead, peopleDetail} = require('./people')
 
 peopleWrite();
 peopleRead();
+
+//Latihan 4
+
+peopleRead();
+peopleDetail(5);
